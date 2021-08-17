@@ -1,0 +1,59 @@
+<!-- templates/home.html -->
+{% load static %}
+<html>
+  <head class="head">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+  </head>
+  <body class="body">
+    <div>
+      <header>
+        <div>
+          <div class="title_wrapper">
+            <h1 class="title">Hello! My name is ZiJun Weng</h1>
+            <h2 class="title">Mathematics and Computer Science Major</h2>
+          </div>
+          <div class="about_me_wrapper">
+            <div class="about_me_content">
+              <img id="photo_me" src = "{% static 'images/IMG_1731.jpeg' %}">
+            </div>
+            <div id="about_me_description" class="about_me_content">
+              <h2 id="about_me_title">About Me</h2>
+              <p>I am a currently a Junior at Rutgers University-New Brunswick
+                studying mathematics and computer science. Ever since my first exposure of
+                coding in high school, I have enjoy creating and working on new projects and improving
+                my skills in coding. Programming languages that I have used and am familiar with include
+                Python, C/C++, Java, JavaScript,
+                and HTML/CSS. I also have experience working with the Django framework, BASH, MacOS, Linux, and Microsoft
+                Excel. My goals are to become a full stack
+                software engineer and to continue learning more about full stack development and other technologies
+                through hands on experience. At university, I have served as Treasurer of
+                the Nicholas Hall Dormitory and am currently a Resident Assistant at the New Gibbons Dormitory.
+                I am also involved in USACS and the Quantitative Finance Club.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="project_info_wrapper">
+        <h1 class="project_info_title">My Projects</h1>
+        {% block content %}
+        {% endblock content %}
+        <div class="link_images_wrapper">
+          <div class="email_address"><h1 class="link_title">Email: zjw779@gmx.com</h1></div>
+          <div class="link_images">
+            <a href="https://github.com/zjw314">
+              <img class="github_img" src="{% static 'images/transparent-essentials-icon-github-icon-github-logo-icon-6066e5d47d18e1.5452840516173562445124.png' %}">
+            </a>
+          </div>
+          <div class="link_images">
+            <a href="https://www.linkedin.com/in/zijun-weng-750933194/">
+              <img class="linkedin_img" src="{% static 'images/LI-Logo.png' %}">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
